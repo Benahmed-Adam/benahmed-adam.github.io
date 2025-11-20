@@ -1,0 +1,41 @@
+body { 
+    background-color: #030303; 
+    color: #e5e5e5; 
+    overflow: hidden; 
+    height: 100vh;
+    height: 100svh;
+}
+
+.glass-panel {
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover {
+    border-color: rgba(0, 255, 148, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px -10px rgba(0, 255, 148, 0.1);
+}
+
+.blur-mode { opacity: 0.3; filter: blur(2px); transform: scale(0.98); pointer-events: none; transition: all 0.4s ease; }
+.focus-mode { z-index: 40; border-color: #00FF94; transform: scale(1.01); box-shadow: 0 0 30px rgba(0, 255, 148, 0.15); transition: all 0.4s ease; }
+
+.main-scroll { height: 100%; overflow-y: auto; scroll-behavior: smooth; }
+
+.grid-layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+}
+
+@media (min-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 240px; 
+        gap: 1.5rem;
+    }
+}
