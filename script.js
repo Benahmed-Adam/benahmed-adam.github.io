@@ -4,11 +4,20 @@ const typeElement = document.getElementById('typewriter');
 
 function typeWriter() {
     const current = titles[titleIndex];
-    if (isDeleting) { typeElement.textContent = current.substring(0, charIndex - 1); charIndex--; } 
-    else { typeElement.textContent = current.substring(0, charIndex + 1); charIndex++; }
+    
+    if (isDeleting) { 
+        typeElement.textContent = current.substring(0, charIndex - 1); charIndex--; 
+    } else { 
+        typeElement.textContent = current.substring(0, charIndex + 1); charIndex++; 
+    }
+
     let speed = isDeleting ? 50 : 100;
-    if (!isDeleting && charIndex === current.length) { speed = 2000; isDeleting = true; } 
-    else if (isDeleting && charIndex === 0) { isDeleting = false; titleIndex = (titleIndex + 1) % titles.length; speed = 500; }
+
+    if (!isDeleting && charIndex === current.length) { 
+        speed = 2000; isDeleting = true; 
+    } else if (isDeleting && charIndex === 0) { 
+        isDeleting = false; titleIndex = (titleIndex + 1) % titles.length; speed = 500; 
+    }
     setTimeout(typeWriter, speed);
 }
 
