@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad-- | Adam Benahmed</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        background: '#030303',
+                        surface: '#0A0A0A',
+                        surfaceHighlight: '#121212',
+                        border: '#222222',
+                        primary: '#00FF94', 
+                        secondary: '#9D4EDD',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background text-white">
+    <div class="min-h-screen flex flex-col">
+        <nav class="glass-panel border-b border-border sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 lg:px-6 py-4 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-neutral-400 hover:text-primary transition-colors">
+                    <i class="bi bi-arrow-left"></i>
+                    <span class="text-sm font-medium">Retour à l'accueil</span>
+                </a>
+                <div class="w-10 h-10 bg-primary/10 border border-primary/20 text-primary font-display font-bold flex items-center justify-center rounded-lg text-sm">AB</div>
+            </div>
+        </nav>
+
+        <main class="flex-1 max-w-7xl mx-auto w-full px-4 lg:px-6 py-12">
+            <div class="mb-12">
+                <h1 class="text-4xl lg:text-6xl font-display font-bold mb-4">Notepad<span class="text-primary">--</span></h1>
+                <p class="text-lg text-neutral-400 max-w-3xl">Clone de Notepad fait en Python avec Pygame mais avec quelques fonctionnalités supplémentaires qui le rendent encore pire que l'original.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                <div class="lg:col-span-2 glass-panel rounded-3xl overflow-hidden">
+                    <div class="aspect-video bg-neutral-900 relative">
+                        <video class="w-full h-full object-cover" muted loop playsinline disablepictureinpicture autoplay>
+                            <source src="video/notepad.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-4">Technologies</h3>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">Python</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm font-medium">Pygame</span>
+                        </div>
+
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-4">Caractéristiques</h3>
+                        <ul class="space-y-2 text-sm text-neutral-300">
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-primary text-xs"></i> Édition de texte</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-primary text-xs"></i> Zoom de qualité</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-primary text-xs"></i> Des effets incroyables</li>
+                            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-primary text-xs"></i> Performant et productif</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-border mt-6">
+                        <a href="https://github.com/Benahmed-Adam/NotePad--" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 bg-white/5 hover:bg-white/10 border border-border rounded-xl text-sm font-medium transition-all">
+                            <i class="bi bi-github"></i>
+                            Voir sur GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-8 lg:p-12">
+                <h2 class="text-2xl font-display font-bold mb-6">À propos du projet</h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        Notepad-- est né de l'envie de créer un éditeur de texte simple mais avec des fonctionnalités qui me manquaient dans le Notepad classique de Windows. J'ai choisi Python avec Pygame pour le développer car cela me permettait d'apprendre le language et la libraire.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mb-4 mt-8">Fonctionnalités principales</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                            <h4 class="font-bold text-white mb-1">
+                                <i class="bi bi-lightning-charge text-primary text-xl mr-3"></i>
+                                Effets visuels épiques
+                            </h4>
+                            <p class="text-sm text-neutral-400">
+                                Une large sélection d'effets stylés pour transformer l'écriture en expérience visuelle immersive.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                            <h4 class="font-bold text-white mb-1">
+                                <i class="bi bi-zoom-in text-primary text-xl mr-3"></i>
+                                Contrôle total du texte
+                            </h4>
+                            <p class="text-sm text-neutral-400">
+                                Déplacez, zoomez et interagissez avec votre texte à la souris pour une mise en page ultra-libre et créative.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                            <h4 class="font-bold text-white mb-1">
+                                <i class="bi bi-floppy text-primary text-xl mr-3"></i>
+                                Sauvegarde & chargement instantanés
+                            </h4>
+                            <p class="text-sm text-neutral-400">
+                                Enregistrez vos poèmes, notes ou créations visuelles et rechargez-les en un clic pour continuer votre chef-d'œuvre.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                            <h4 class="font-bold text-white mb-1">
+                                <i class="bi bi-music-note-beamed text-primary text-xl mr-3"></i>
+                                Popups & audio intégré
+                            </h4>
+                            <p class="text-sm text-neutral-400">
+                                De la musique qui se joue en fond afin de rendre l'expérience plus épique encore et de magnifiques popups qui peuvent vous servir de pense-bête.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 mt-8">Apprentissages</h3>
+                    <p class="text-neutral-300 leading-relaxed">
+                        Ce projet m'a permis d'approfondir mes connaissances en Python et de découvrir les subtilités de Pygame pour créer des interfaces graphiques.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="border-t border-border py-8 mt-12">
+            <div class="max-w-7xl mx-auto px-4 lg:px-6 flex items-center justify-between">
+                <p class="text-neutral-500 text-sm">Adam Benahmed</p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/Benahmed-Adam" target="_blank" class="text-neutral-500 hover:text-white transition-colors"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/adam-benahmed-a18bb5383/" target="_blank" class="text-neutral-500 hover:text-white transition-colors"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

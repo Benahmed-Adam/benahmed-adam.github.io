@@ -51,7 +51,9 @@ function setFocus(section) {
     });
 
     if (targetElement) {
-        if (section === 'projects' && targetElement.previousElementSibling && targetElement.previousElementSibling.tagName === 'DIV') {
+        if (section === 'about') {
+            document.querySelector('.main-scroll').scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (section === 'projects' && targetElement.previousElementSibling && targetElement.previousElementSibling.tagName === 'DIV') {
                 targetElement.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: section === 'stack' ? 'center' : 'start' });
@@ -66,22 +68,13 @@ document.addEventListener('click', (e) => {
     } 
 });
 
-const videoCards = document.querySelectorAll('.group');
-videoCards.forEach(card => { 
+document.querySelectorAll('.group').forEach(card => { 
     const video = card.querySelector('video'); 
     if(video) { 
         card.addEventListener('mouseenter', () => video.play().catch(e => {})); 
         card.addEventListener('mouseleave', () => video.pause()); 
     } 
 });
-
-function copyEmail() { 
-    navigator.clipboard.writeText("adam.benahmeed@gmail.com").then(() => { 
-        const t = document.getElementById('toast'); 
-        t.classList.remove('opacity-0', 'translate-y-[-20px]'); 
-        setTimeout(() => t.classList.add('opacity-0', 'translate-y-[-20px]'), 3000); 
-    }); 
-}
 
 document.addEventListener('DOMContentLoaded', () => { 
     typeWriter(); 
