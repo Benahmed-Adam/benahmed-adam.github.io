@@ -80,4 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
     typeWriter(); 
     setInterval(updateClock, 1000); 
     updateClock(); 
+
+    const backToTop = document.getElementById('backToTop');
+    const mainScroll = document.querySelector('.main-scroll');
+    
+    mainScroll.addEventListener('scroll', () => {
+        if (mainScroll.scrollTop > 300) {
+            backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            backToTop.classList.add('opacity-100');
+        } else {
+            backToTop.classList.add('opacity-0', 'pointer-events-none');
+            backToTop.classList.remove('opacity-100');
+        }
+    });
 });

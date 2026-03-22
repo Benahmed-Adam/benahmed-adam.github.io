@@ -413,6 +413,10 @@
         </div>
     </main>
 
+    <button id="backToTop" onclick="document.querySelector('.main-scroll').scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-24 lg:bottom-6 right-4 w-12 h-12 bg-surface border border-border rounded-full flex items-center justify-center text-neutral-500 hover:text-primary hover:border-primary transition-all opacity-0 pointer-events-none z-40 shadow-xl">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
     <nav class="lg:hidden fixed bottom-4 left-4 right-4 h-16 bg-[#111]/90 backdrop-blur-xl border border-white/10 rounded-2xl z-50 flex justify-around items-center shadow-2xl">
         <button onclick="setFocus('about')" class="flex flex-col items-center gap-1 text-neutral-500 focus:text-primary transition-colors"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg><span class="text-[9px] font-bold uppercase">Profil</span></button>
         <button onclick="setFocus('stack')" class="flex flex-col items-center gap-1 text-neutral-500 focus:text-primary transition-colors"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg><span class="text-[9px] font-bold uppercase">Stack</span></button>
