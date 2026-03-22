@@ -76,6 +76,43 @@ document.querySelectorAll('.group').forEach(card => {
     } 
 });
 
+const navTooltips = {
+    'about': 'À propos de moi',
+    'stack': 'Ma stack technique',
+    'projects': 'Mes projets'
+};
+
+let tooltipTimeout = null;
+
+document.querySelectorAll('button[class*="nav-btn"], nav button').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        const match = this.getAttribute('onclick')?.match(/setFocus\('(\w+)'\)/);
+        if (!match) return;
+        const section = match[1];
+        
+        tooltipTimeout = setTimeout(() => {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'nav-tooltip';
+            tooltip.textContent = navTooltips[section];
+            tooltip.id = 'active-tooltip';
+            this.appendChild(tooltip);
+            requestAnimationFrame(() => tooltip.classList.add('visible'));
+        }, 250);
+    });
+
+    btn.addEventListener('mouseleave', function() {
+        if (tooltipTimeout) {
+            clearTimeout(tooltipTimeout);
+            tooltipTimeout = null;
+        }
+        const tooltip = this.querySelector('.nav-tooltip');
+        if (tooltip) {
+            tooltip.classList.remove('visible');
+            setTimeout(() => tooltip.remove(), 200);
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => { 
     typeWriter(); 
     setInterval(updateClock, 1000); 
