@@ -60,7 +60,7 @@
 
 <body class="flex flex-col lg:flex-row selection:bg-primary selection:text-black" style="overflow: hidden;">
     <aside class="hidden lg:flex w-24 h-full bg-surface border-r border-border flex-col justify-between items-center py-10 z-20 relative flex-shrink-0">
-        <div class="w-12 h-12 bg-primary/10 border border-primary/20 text-primary font-display font-bold flex items-center justify-center rounded-xl text-xl select-none ">AB</div>
+        <a href="index.html" onclick="event.preventDefault(); document.querySelector('.main-scroll').scrollTo({ top: 0, behavior: 'smooth' });" class="w-12 h-12 bg-primary/10 border border-primary/20 text-primary font-display font-bold flex items-center justify-center rounded-xl text-xl select-none cursor-pointer hover:bg-primary/20 transition-colors">AB</a>
         <nav class="flex flex-col gap-8 items-center w-full">
             <button onclick="setFocus('about')" class="nav-btn group relative"><div class="p-3 rounded-xl text-neutral-500 hover:bg-white/5 hover:text-primary transition-all"><i class="bi bi-person"></i></div></button>
             <button onclick="setFocus('stack')" class="nav-btn group relative"><div class="p-3 rounded-xl text-neutral-500 hover:bg-white/5 hover:text-primary transition-all"><i class="bi bi-braces"></i></div></button>
