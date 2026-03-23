@@ -9,38 +9,53 @@
 
 <url>
   <loc>https://benahmed-adam.github.io/</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://benahmed-adam.github.io/index.html</loc>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://benahmed-adam.github.io/cv.pdf</loc>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://benahmed-adam.github.io/notepad.html</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://benahmed-adam.github.io/8chip8.html</loc>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://benahmed-adam.github.io/asciicam.html</loc>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://benahmed-adam.github.io/simple_http_server.html</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://benahmed-adam.github.io/chatterbox.html</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://benahmed-adam.github.io/paint.html</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://benahmed-adam.github.io/backpain.html</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
+  <lastmod>2026-03-23T10:08:21+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://benahmed-adam.github.io/index.html</loc>
-  <lastmod>2026-03-07T10:27:09+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 
 
