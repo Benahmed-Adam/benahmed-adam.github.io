@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benahmed-adam.github.io/sitemap.xml
